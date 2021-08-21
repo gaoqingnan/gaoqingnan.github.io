@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://gaoqingnan.github.io/favicon.ico?v=1629550707376">
+<link rel="shortcut icon" href="https://gaoqingnan.github.io/favicon.ico?v=1629551429294">
 <link rel="stylesheet" href="https://gaoqingnan.github.io/styles/main.css">
 
 
@@ -32,7 +32,7 @@
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://gaoqingnan.github.io">
-        <img src="https://gaoqingnan.github.io/images/avatar.png?v=1629550707376" class="site-logo">
+        <img src="https://gaoqingnan.github.io/images/avatar.png?v=1629551429294" class="site-logo">
         <h1 class="site-title">学习记录</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -121,51 +121,50 @@
 可以选择主对角线，次对角线顺序,枚举区间长度和区间左端点<br>
 可以选择从下往上，从左往右，也可以选择从左往右，从下往上</p>
 <h2 id="代码">代码</h2>
-<p>'''<br>
-class Solution {<br>
-public:<br>
-int getMoneyAmount(int n) {</p>
-<pre><code>    // 区间dp
-    // 极小化极大
-    // 类似矩阵乘法的最小次数，石子游戏，戳气球，最长回文子序列，扔鸡蛋
-    // 支付的总金额是猜对之前的总的尝试数字之和
+<pre><code>class Solution {
+public:
+    int getMoneyAmount(int n) {
 
-    // 子问题：在区间[i,j]，猜对数字，需要支付的总金额
-    // 状态转移方程：
-    // 我们可以枚举i到j之间每个数，作为猜测的数字
-    // 如果猜测的数字是k，分为三种情况
-    // 猜对，此时为0
-    // 猜小，k+dp[k+1][j]
-    // 猜大，k+dp[i][k-1]
-    // 三种情况取最大，所有数字取最小
+        // 区间dp
+        // 极小化极大
+        // 类似矩阵乘法的最小次数，石子游戏，戳气球，最长回文子序列，扔鸡蛋
+        // 支付的总金额是猜对之前的总的尝试数字之和
 
-    // 初始化为最大值
+        // 子问题：在区间[i,j]，猜对数字，需要支付的总金额
+        // 状态转移方程：
+        // 我们可以枚举i到j之间每个数，作为猜测的数字
+        // 如果猜测的数字是k，分为三种情况
+        // 猜对，此时为0
+        // 猜小，k+dp[k+1][j]
+        // 猜大，k+dp[i][k-1]
+        // 三种情况取最大，所有数字取最小
 
-    // 遍历顺序
-    // 可以选择主对角线，次对角线顺序,枚举区间长度和区间左端点
-    // 可以选择从下往上，从左往右，也可以选择从左往右，从下往上
+        // 初始化为最大值
 
-    vector&lt;vector&lt;int&gt;&gt; dp(n+1,vector&lt;int&gt;(n+1,INT_MAX));
+        // 遍历顺序
+        // 可以选择主对角线，次对角线顺序,枚举区间长度和区间左端点
+        // 可以选择从下往上，从左往右，也可以选择从左往右，从下往上
 
-    for(int i=0;i&lt;=n;i++)    // 初始化，只有一个数不用尝试
-    dp[i][i]=0;
+        vector&lt;vector&lt;int&gt;&gt; dp(n+1,vector&lt;int&gt;(n+1,INT_MAX));
 
-    for(int i=0;i&lt;n;i++)
-    dp[i+1][i]=0;
+        for(int i=0;i&lt;=n;i++)    // 初始化，只有一个数不用尝试
+        dp[i][i]=0;
 
-    for(int len=2;len&lt;=n;len++)
-    for(int i=1;i+len-1&lt;=n;i++){
-        int j=i+len-1;
+        for(int i=0;i&lt;n;i++)
+        dp[i+1][i]=0;
 
-        for(int k=i;k&lt;=j;k++)
-        dp[i][j]=min(dp[i][j],max(dp[i][k-1]+k,k!=n?dp[k+1][j]+k:0));
+        for(int len=2;len&lt;=n;len++)
+        for(int i=1;i+len-1&lt;=n;i++){
+            int j=i+len-1;
+
+            for(int k=i;k&lt;=j;k++)
+            dp[i][j]=min(dp[i][j],max(dp[i][k-1]+k,k!=n?dp[k+1][j]+k:0));
+        }
+
+        return dp[1][n];
     }
-
-    return dp[1][n];
-}
+};
 </code></pre>
-<p>};<br>
-'''</p>
 
             </div>
             
