@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://gaoqingnan.github.io/favicon.ico?v=1629551753342">
+<link rel="shortcut icon" href="https://gaoqingnan.github.io/favicon.ico?v=1629552145910">
 <link rel="stylesheet" href="https://gaoqingnan.github.io/styles/main.css">
 
 
@@ -32,7 +32,7 @@
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://gaoqingnan.github.io">
-        <img src="https://gaoqingnan.github.io/images/avatar.png?v=1629551753342" class="site-logo">
+        <img src="https://gaoqingnan.github.io/images/avatar.png?v=1629552145910" class="site-logo">
         <h1 class="site-title">学习记录</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -98,13 +98,13 @@
             <div class="post-date">2021-08-21</div>
             
             <div class="post-content" v-pre>
-              <h2 id="问题">问题</h2>
-<p>我们正在玩一个猜数游戏，游戏规则如下：<br>
+              <p><strong>问题</strong><br>
+我们正在玩一个猜数游戏，游戏规则如下：<br>
 我从 1 到 n 之间选择一个数字，你来猜我选了哪个数字。<br>
 每次你猜错了，我都会告诉你，我选的数字比你的大了或者小了。<br>
 然而，当你猜了数字 x 并且猜错了的时候，你需要支付金额为 x 的现金。直到你猜到我选的数字，你才算赢得了这个游戏。</p>
-<h2 id="思路">思路</h2>
-<p>区间dp<br>
+<p><strong>思路</strong><br>
+区间dp<br>
 极小化极大<br>
 类似矩阵乘法的最小次数，石子游戏，戳气球，最长回文子序列，扔鸡蛋<br>
 支付的总金额是猜对之前的总的尝试数字之和</p>
@@ -120,7 +120,7 @@
 <p>遍历顺序<br>
 可以选择主对角线，次对角线顺序,枚举区间长度和区间左端点<br>
 可以选择从下往上，从左往右，也可以选择从左往右，从下往上</p>
-<h2 id="代码">代码</h2>
+<p><strong>代码</strong></p>
 <pre><code>class Solution {
 public:
     int getMoneyAmount(int n) {
