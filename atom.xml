@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://gaoqingnan.github.io</id>
     <title>学习记录</title>
-    <updated>2021-08-21T12:48:09.036Z</updated>
+    <updated>2021-08-21T12:51:46.104Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://gaoqingnan.github.io"/>
     <link rel="self" href="https://gaoqingnan.github.io/atom.xml"/>
-    <subtitle>&lt;h6&gt;为实现两个一百年奋斗目标而不懈奋斗！&lt;/h6&gt;</subtitle>
+    <subtitle>&lt;h3&gt;为实现两个一百年目标而不懈奋斗！&lt;/h3&gt;</subtitle>
     <logo>https://gaoqingnan.github.io/images/avatar.png</logo>
     <icon>https://gaoqingnan.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, 学习记录</rights>
