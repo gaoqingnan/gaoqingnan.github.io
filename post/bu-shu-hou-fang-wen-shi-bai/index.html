@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>关于 | 学习记录</title>
+<title>部署后，访问失败 | 学习记录</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -18,14 +18,9 @@
 
 
 
-    <meta name="description" content="
-欢迎来到我的小站呀，很高兴遇见你！🤝
-
-🏠 关于本站
-👨‍💻 博主是谁
-⛹ 兴趣爱好
-📬 联系我呀
-..." />
+    <meta name="description" content="经过打断点，开启debug模式，发起请求后，发现user的companyId字段的值不为null，而是0，发现对应的实体类的字段的类型是基本类型int，改成引用类型Integer
+这样实体类的所有字段都是引用类型，没有赋值的为null
+查询..." />
     <meta name="keywords" content="" />
   </head>
   <body>
@@ -97,20 +92,29 @@
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">关于</h2>
-            <div class="post-date">2019-01-25</div>
+            <h2 class="post-title">部署后，访问失败</h2>
+            <div class="post-date">2021-09-14</div>
             
             <div class="post-content" v-pre>
-              <blockquote>
-<p>欢迎来到我的小站呀，很高兴遇见你！🤝</p>
-</blockquote>
-<h2 id="关于本站">🏠 关于本站</h2>
-<h2 id="博主是谁">👨‍💻 博主是谁</h2>
-<h2 id="兴趣爱好">⛹ 兴趣爱好</h2>
-<h2 id="联系我呀">📬 联系我呀</h2>
+              <p>经过打断点，开启debug模式，发起请求后，发现user的companyId字段的值不为null，而是0，发现对应的实体类的字段的类型是基本类型int，改成引用类型Integer</p>
+<p>这样实体类的所有字段都是引用类型，没有赋值的为null<br>
+查询的时候，没有赋值的也是null，不会增加筛选条件</p>
+<p>一开始companyId为基本类型，不赋值默认为0<br>
+查询的时候，companyId不赋值默认为0，增加了筛选条件，所以查询失败，登录失败</p>
+<p>所以，实体类的成员变量应该尽量是引用类型</p>
+<p>第一次使用调试找出项目bug</p>
 
             </div>
             
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://gaoqingnan.github.io/post/neng-zi-ji-zuo-de-yi-ding-zi-ji-zuo/">
+                  <h3 class="post-title">
+                    能自己做的，一定自己做
+                  </h3>
+                </a>
+              </div>
             
 
             
