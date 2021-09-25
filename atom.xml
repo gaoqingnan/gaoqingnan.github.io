@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://gaoqingnan.github.io</id>
     <title>学习记录</title>
-    <updated>2021-09-21T00:17:04.328Z</updated>
+    <updated>2021-09-25T14:32:42.879Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://gaoqingnan.github.io"/>
     <link rel="self" href="https://gaoqingnan.github.io/atom.xml"/>
@@ -10,6 +10,13 @@
     <logo>https://gaoqingnan.github.io/images/avatar.png</logo>
     <icon>https://gaoqingnan.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, 学习记录</rights>
+    <entry>
+        <title type="html"><![CDATA[感悟]]></title>
+        <id>https://gaoqingnan.github.io/post/gan-wu/</id>
+        <link href="https://gaoqingnan.github.io/post/gan-wu/">
+        </link>
+        <updated>2021-09-25T14:19:13.000Z</updated>
+    </entry>
     <entry>
         <title type="html"><![CDATA[学会装傻]]></title>
         <id>https://gaoqingnan.github.io/post/chun-bing-bo-ren-qing-geng-bo/</id>
